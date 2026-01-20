@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: mp_postgres
+    environment:
+      POSTGRES_DB: pm_api
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - mp_pg_data:/var/lib/postgresql/data
+
+volumes:
+  mp_pg_data:
