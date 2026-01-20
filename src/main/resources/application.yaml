@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mp-checkout-pro
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pm_api
+    username: postgres
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  mercadopago:
+    access-token: ${MP_ACESS_TOKEN}
+    notification-url: ${MP_NOTIFICATION_URL:http://localhost:8080/api/payments/webhook}
