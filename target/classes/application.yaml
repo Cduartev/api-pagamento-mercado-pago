@@ -10,3 +10,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+  mercadopago:
+    access-token: ${MP_ACESS_TOKEN}
+    notification-url: ${MP_NOTIFICATION_URL:http://localhost:8080/api/payments/webhook}
